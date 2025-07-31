@@ -1,0 +1,21 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
+  "extends": ["ultracite"],
+  "linter": {
+    "rules": {
+      "complexity": {
+        "useSimplifiedLogicExpression": "off"
+      },
+      "a11y": {
+        "noSvgWithoutTitle": "off"
+      },
+      "suspicious": {
+        "useAwait": "off",
+        "noConfusingVoidType": "off"
+      },
+      "nursery": {
+        "noShadow": "off"
+      }
+    }
+  }
+}

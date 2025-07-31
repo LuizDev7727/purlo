@@ -1,0 +1,9 @@
+services:
+  connect-pg:
+    image: bitnami/postgresql:latest
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=purlo
+      - POSTGRES_PASSWORD=purlo
+      - POSTGRES_DB=purlo

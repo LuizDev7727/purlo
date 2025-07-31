@@ -1,0 +1,12 @@
+{
+  "name": "@purlo/env",
+  "version": "0.0.0",
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@t3-oss/env-nextjs": "^0.13.8",
+    "zod": "^4.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20"
+  }
+}

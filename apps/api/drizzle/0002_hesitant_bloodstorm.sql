@@ -1,0 +1,1 @@
+ALTER TABLE "integrations" RENAME COLUMN "role" TO "provider";

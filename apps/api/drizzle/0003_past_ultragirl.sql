@@ -1,0 +1,2 @@
+CREATE TYPE "public"."provider" AS ENUM('YOUTUBE', 'TIKTOK');--> statement-breakpoint
+ALTER TABLE "integrations" ALTER COLUMN "provider" SET DATA TYPE "public"."provider" USING "provider"::text::"public"."provider";
