@@ -14,7 +14,10 @@ export default async function acceptInviteUseCase(
 ): Promise<void> {
   const { inviteId, userId } = request;
 
-  const [invite] = await db.select().from(invites).where(eq(invites.id, inviteId));
+  const [invite] = await db
+    .select()
+    .from(invites)
+    .where(eq(invites.id, inviteId));
   if (!invite) {
     throw new Error('Invite not found or expired.');
   }
@@ -36,4 +39,4 @@ export default async function acceptInviteUseCase(
     });
     await tx.delete(invites).where(eq(invites.id, invite.id));
   });
-} 
+}
