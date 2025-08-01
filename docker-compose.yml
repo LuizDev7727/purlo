@@ -9,7 +9,7 @@ services:
       - POSTGRES_DB=purlo
 
   jaeger:
-    image: jaegertracing/all-in-one:1.57
+    image: jaegertracing/jaeger:2.8.0
     ports:
       - "16686:16686" # UI
       - "14268:14268" # Traces HTTP
