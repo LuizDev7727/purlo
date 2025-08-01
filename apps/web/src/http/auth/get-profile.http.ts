@@ -8,6 +8,5 @@ type Response = {
 
 export default async function getProfileHttp() {
   const profile = await api.get('auth/get-profile').json<Response>();
-
   return profile;
 }
