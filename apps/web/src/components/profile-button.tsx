@@ -3,6 +3,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { ChevronDown, LogOut } from 'lucide-react';
 import getProfileHttp from '@/http/auth/get-profile.http';
+import ProfileButtonLoading from './profile-button-loading';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import {
   DropdownMenu,
@@ -22,11 +23,15 @@ function getInitials(name: string): string {
 }
 
 export function ProfileButton() {
-  const { data: user } = useQuery({
+  const { data: user, isLoading } = useQuery({
     queryKey: ['profile'],
     queryFn: getProfileHttp,
     refetchOnWindowFocus: false,
   });
+
+  if (isLoading) {
+    return <ProfileButtonLoading />;
+  }
 
   if (!user) {
     return <p>Error</p>;
