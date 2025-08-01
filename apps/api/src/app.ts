@@ -1,3 +1,5 @@
+import '@opentelemetry/auto-instrumentations-node/register';
+
 import fastifyCookie from '@fastify/cookie';
 import fastifyCors from '@fastify/cors';
 import fastifyJwt from '@fastify/jwt';
