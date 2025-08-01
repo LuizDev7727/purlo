@@ -11,7 +11,7 @@ import {
 import { organizations } from './organizations';
 import { users } from './users';
 
-export const roleEnum = pgEnum('role', ['ADMIN', 'MEMBER', 'BILLING']);
+export const roleEnum = pgEnum('role', ['ADMIN', 'MEMBER']);
 
 export const invites = pgTable(
   'invites',
