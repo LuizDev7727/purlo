@@ -1,5 +1,10 @@
-import { GalleryVerticalEnd } from "lucide-react";
-import SignUpForm from "./sign-up-form";
+import { GalleryVerticalEnd } from 'lucide-react';
+import type { Metadata } from 'next';
+import SignUpForm from './sign-up-form';
+
+export const metadata: Metadata = {
+  title: 'Purlo | Cadastrar-se',
+};
 
 export default function SignUp() {
   return (
